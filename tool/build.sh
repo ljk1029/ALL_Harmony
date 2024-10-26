@@ -14,7 +14,7 @@ function build() {
         mkdir -p "$out_path"
     fi
     cd $out_path
-    cmake ../code_diy
+    cmake ../base_diy
     make
 }
 
