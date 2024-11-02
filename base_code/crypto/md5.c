@@ -1,11 +1,19 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
-#include "md5.h"
 
 typedef unsigned int UINT4;
 void md5_encode(unsigned char *output, const uint32_t *input, size_t len);
 void md5_decode(uint32_t *output, const unsigned char *input, size_t len);
+
+#define MD5_BLOCK_SIZE 64
+#define MD5_DIGEST_SIZE 16
+
+typedef struct {
+    uint32_t state[4];
+    uint32_t count[2];
+    unsigned char buffer[MD5_BLOCK_SIZE];
+} MD5_CTX;
 
 static unsigned char padding[64] = {
     0x80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,

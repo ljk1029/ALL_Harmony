@@ -1,12 +1,20 @@
 ## ALL_DOME
-### code_diy
-小组件 code
+### code
+- base_code  
+模块代码 
+
+- thrid_part_base   
+小组件代码 开源库
+
+- thrid_part_dev
+驱动代码 开源库
+
 
 - 树的旋转说明
-![image](https://github.com/ljk1029/ALL_Harmony/tree/main/img/tree.png)
+![image](https://github.com/ljk1029/ALL_Harmony/blob/main/image/img_tree.png)   
 
 - 排序
-![image](https://github.com/ljk1029/ALL_Harmony/tree/main/img/sort.png)
+![image](https://github.com/ljk1029/ALL_Harmony/blob/main/image/img_sort.png)   
 
 
 
@@ -76,5 +84,16 @@ void fun() {
 
 ## 四、其他说明
 ### 脚本win/lin字符转换
-  脚本出现windows字符转化到unix/linux下
-  dos2unix build.sh
+脚本出现windows字符转化到unix/linux下   
+dos2unix build.sh  
+
+### gtest 安装
+  1、地址:https://github.com/google/googletest.git  
+
+  2、编译 cmake .. / make  
+
+  3、依赖  
+  拷贝生成静态库  
+  sudo cp *.a /usr/local/lib  
+  拷贝头文件  
+  sudo cp -r include/gtest /usr/local/include  

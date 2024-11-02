@@ -42,8 +42,6 @@ endif()
 
 # 功能模块编译开关
 if(FUNCTION_USE_FUN)    
-
-# 4、添加子目录
 add_subdirectory(modules)
-
+add_subdirectory(base_alg)
 endif()
