@@ -26,7 +26,6 @@ Period> 来创建，其中 Rep 是表示时间间隔的值的类型， Period
 */
 
 namespace my_time {
-
 #ifndef CallbackFuc
 using CallbackFuc = std::function<void()>;
 #endif

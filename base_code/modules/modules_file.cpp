@@ -149,7 +149,7 @@ void file_append(const char *&file, const char *text) {
 
 
 
-void test_dir() {
+void demo_directory() {
     my_file::ConstPath dir_path{"mydir"};
     my_file::ConstPath dirs_path{"mydir/dir1"};
     my_file::ConstPath new_path{"mydir/mk1"};
@@ -171,7 +171,7 @@ void test_dir() {
     my_file::is_exist(dir_path);
 }
 
-void test_RW() {
+void demo_file_RW() {
     const char *file{"file.txt"};
     my_file::file_write(file, "123");
     my_file::file_read(file);
@@ -185,7 +185,7 @@ int main(int argc, char *argv[])
 int file_main(int argc, char *argv[])
 #endif
 {
-    test_dir();
-    test_RW();
+    demo_directory();
+    demo_file_RW();
     return 0;
 }

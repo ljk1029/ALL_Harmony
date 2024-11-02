@@ -1,1 +1,0 @@
-g++ -std=gnu++17 main.cpp

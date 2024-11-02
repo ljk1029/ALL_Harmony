@@ -333,7 +333,7 @@ private:
         char border_char = start_mode ? '~':'*';
 
         // 确保边框长度为正数
-        std::string::size_type border_len = (TOTAL_PRINT_LENGTH - title_length - 10) / 2;
+        std::string::size_type border_len = (max_title_length - title_length - 10) / 2;
         std::string border = std::string(border_len, border_char);
 
         // 打印返回值

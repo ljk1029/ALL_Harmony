@@ -13,7 +13,9 @@ set(TARGET1 "hid_linux")
 set(TARGET2 "hid_libusb")
 
 # 添加头文件搜索路径
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/hidapi)
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/hidapi
+)
 
 # 生成hid linux
 add_executable(
@@ -30,7 +32,10 @@ target_link_libraries(
 ) 
 
 # 生成hid libusb
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../libusb-1.0.27/libusb)
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/../libusb-1.0.27/libusb
+)
+
 add_executable(
     ${TARGET2}
     ${CMAKE_CURRENT_SOURCE_DIR}/hidtest.c   
